@@ -19,7 +19,8 @@
   - `BOT_TOKEN`: Discord bot token.
   - `CHANNEL_ID`: Voice channel ID to monitor.
   - `MAX_TALK_DURATION`: Maximum allowed talk time (seconds).
-
+  - `mute_threshold`: Mute  duration threshold (seconds).
+  - `base_mute_duration`:  Base mute duration (seconds).
 ### Installation
 
 1. **Clone the repository**:
@@ -38,6 +39,8 @@
    BOT_TOKEN=your_discord_bot_token
    CHANNEL_ID=your_voice_channel_id
    MAX_TALK_DURATION=300
+   mute_threshold=60
+   base_mute_duration=30
    ```
 
 ### Run the Bot
@@ -65,7 +68,7 @@ python3 main.py
   - `Speak`
 
 - **Bot Fails to Start**:
-  Ensure your `.env` file is correctly set up with the required `BOT_TOKEN`, `CHANNEL_ID`, and `MAX_TALK_DURATION`.
+  Ensure your `.env` file is correctly set up with the required `BOT_TOKEN`, `CHANNEL_ID`,`MAX_TALK_DURATION`,  `mute_threshold`, and `base_mute_duration` variables.
 
 ### Logs
 If the bot crashes or doesn't work as expected, check the logs to identify the issue. Logs are printed directly in the console.
